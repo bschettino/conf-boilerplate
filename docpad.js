@@ -7,13 +7,13 @@ module.exports = {
 
     // Conference info
     conf: {
-      name: "Conference name",
+      name: "STI Dev meeting",
       description: "Conference description",
-      date: "November 15",
+      date: "25 de Março",
       // If your event is free, just comment this line
-      price: "$100",
-      venue: "Coco Bongo",
-      address: "Boulevard Kukulcan, 30",
+      // price: "$100",
+      venue: "Instituto de Computação",
+      address: "sala 308",
       city: "Cancún",
       state: "Quintana"
     },

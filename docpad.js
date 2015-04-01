@@ -8,22 +8,22 @@ module.exports = {
     // Conference info
     conf: {
       name: "STI Dev meeting",
-      description: "Conference description",
+      description: "O Dev Meeting, é uma reunião dos desenvolvedores da STI-UFF pra palestrar, debater sobre tecnologias e etc. Então convidem amigos que possam se interessar, o evento é aberto também para quem não é da STI!",
       date: "25 de Março",
       // If your event is free, just comment this line
       // price: "$100",
-      venue: "Instituto de Computação",
-      address: "sala 308",
-      city: "Cancún",
-      state: "Quintana"
+      venue: "Instituto de Computação, sala 308",
+      address: "Campus da Praia Vermelha, Rua Passo da Pátria, 156, São Domingos",
+      city: "Niterói",
+      state: "Rio de Janeiro"
     },
 
     // The Call To Action button at the header,
     // If you don't want this, just remove the callToAction property.
-    callToAction: {
-        text: "Register now!",
-        link: "http://eventick.com.br"
-    },
+    // callToAction: {
+    //     text: "Register now!",
+    //     link: "http://eventick.com.br"
+    // },
 
     // "Fork me on GitHub", if you don't want this, just remove the forkButton property
     forkButton: {
@@ -44,66 +44,54 @@ module.exports = {
       'about',
       'location',
       'speakers',
-      'schedule',
-      'sponsors',
-      'partners'
-      // 'contact'
+      // 'schedule',
+      'contact'
     ],
 
     // Labels which you can translate to other languages
     labels: {
-      about: "About",
-      location: "Location",
-      speakers: "Speakers",
-      schedule: "Schedule",
-      sponsors: "Sponsors",
-      partners: "Partners",
-      contact: "Contact"
+      about: "Sobre",
+      location: "Localização",
+      speakers: "Palestras",
+      // schedule: "Programação",
+      contact: "Contato"
     },
 
     // The entire schedule
     schedule: [
       {
-        name: "Check-in / Breakfast",
-        time: "9h00"
-      },
-      {
-        name: "Linus Torvalds",
-        photo: "themes/yellow-swan/img/speaker.jpg",
-        bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-        company: "Linux Foundation",
+        name: "Marcos Còrtes",
+        photo: ["themes/yellow-swan/img/marcos.jpg"],
+        bio: "É o cara!!!",
+        company: "STI",
         link: {
           href: "http://twitter.com/linus",
           text: "@linus"
         },
         presentation: {
-          title: "Digging into a Linux Kernel",
+          title: "Criação de módulos Java",
           description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-          time: "10h00"
+          time: "15h00"
         }
       },
       {
-        name: "Bill Gates",
-        photo: "themes/yellow-swan/img/speaker.jpg",
+        name: "Bruno Schettino e Igor Barbosa",
+        photo: ["themes/yellow-swan/img/schett.jpg", "themes/yellow-swan/img/igor.jpg"],
         bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-        company: "Microsoft",
+        company: "STI",
         link: {
           href: "http://github.com/billy95",
           text: "@billy95"
         },
         presentation: {
-          title: "Introducing Windows 12",
+          title: "Tropical Ruby Experience",
           description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-          time: "11h00"
+          time: "15h30"
         }
       },
       {
-        name: "Lunch",
-        time: "12h00"
-      },
-      {
-        name: "Chuck Norris",
-        photo: "themes/yellow-swan/img/speaker.jpg",
+        name: "Rodrigo Castro",
+        photo: ["themes/yellow-swan/img/rod.jpg"],
         bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
         company: "Delta Command",
         link: {
@@ -111,14 +99,14 @@ module.exports = {
           text: "@littlechuck"
         },
         presentation: {
-          title: "How to kill a elephant with one finger",
+          title: "Usabilidade na web",
           description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-          time: "13h00"
+          time: "16h20"
         }
       },
       {
-        name: "Steve Jobs",
-        photo: "themes/yellow-swan/img/speaker.jpg",
+        name: "Igor Barbosa e Rennan Oliveira",
+        photo: ["themes/yellow-swan/img/igorennan.png"],
         bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
         company: "Apple, Inc.",
         link: {
@@ -126,43 +114,9 @@ module.exports = {
           text: "@stevie"
         },
         presentation: {
-          title: "Presenting iPad",
+          title: "Web Support Tools for Open Source",
           description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-          time: "14h00"
-        }
-      },
-      {
-        name: "Coffee-break",
-        time: "15h00"
-      },
-      {
-        name: "Mark Zuckerberg",
-        photo: "themes/yellow-swan/img/speaker.jpg",
-        bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-        company: "Facebook",
-        link: {
-          href: "http://twitter.com/zuck",
-          text: "@zuck"
-        },
-        presentation: {
-          title: "Revealing Facebook Secrets",
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-          time: "16h00"
-        }
-      },
-      {
-        name: "Steve Wozniak",
-        photo: "themes/yellow-swan/img/speaker.jpg",
-        bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-        company: "Apple, Inc.",
-        link: {
-          href: "http://twitter.com/woz",
-          text: "@woz"
-        },
-        presentation: {
-          title: "Why do I prefer Android over iPhone",
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
-          time: "17h00"
+          time: "16h50"
         }
       }
     ],

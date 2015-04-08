@@ -17,6 +17,10 @@
         Google Maps implementation
     ***/
 
+    conf.map = {       
+        // marker: 'themes/yellow-swan/img/marker-default.png'        
+    };
+
     // Google Maps configs
     conf.map.init = function ($element) {
         conf.map.element = $element;
@@ -53,6 +57,7 @@
                 new google.maps.Marker({
                     map: conf.map.canvas,
                     position: results[0].geometry.location
+                    // icon: conf.map.marker
                 });
             } else {
                 if (window.console) {

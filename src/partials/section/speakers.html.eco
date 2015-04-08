@@ -1,25 +1,103 @@
 <h2 class="section-title"><%= @labels['speakers'] %></h2>
 
 <ul class="speakers-list">
-<% for speaker in @schedule: %>
-  <% if speaker.presentation: %>
-    <li class="speakers-item" itemprop="performer" itemscope itemtype="http://schema.org/Person">
-      <% if speaker.photo: %>
-        <span class="speaker-photo">
-          <img class="photo" src="<%= speaker.photo[0] %>" alt="<%= speaker.name %>" itemprop="image">
+<%appointment_index = -1%>
+<% for appointment in @schedule: %>
+<%appointment_index++%>
+  <% if appointment.presentation: %>
+    <li class="speakers-item" itemprop="performer" itemscope>
+      <% if appointment.speakers[0].photo: %>
+        <span class="speaker-photo" >
+          <img class="photo" id="<%=appointment_index%>" src="<%= appointment.speakers[0].photo %>" alt="<%= appointment.speakers[0].name %>" itemprop="image">
         </span>
       <% end %>
 
       <h3 class="speech-title">
-        <% if speaker.presentation.time: %>
-          <span class="speech-time"><%= speaker.presentation.time %></span>
+        <% if appointment.presentation.time: %>
+          <span class="speech-time"><%= appointment.presentation.time %></span>
         <% end %>
-          <span> <%= speaker.presentation.title %></span>
+          <span> <%= appointment.presentation.title %></span>
       </h3>
 
-      <h3 class="speakers-name"><%= speaker.name %> <% if speaker.link: %><a href="<%= speaker.link.href %>" title="<%= speaker.link.text %>"><%= speaker.link.text %></a><% end %></h3>
-      <p class="speakers-bio"><%= speaker.presentation.description %></p>
+      <h3 class="speakers-name">
+      <%index = 0%>
+      <% for speaker in appointment.speakers: %>
+        <%index++%>
+        <%if (appointment.speakers.length > 1) && (index == appointment.speakers.length):%>
+        e
+        <%end%>
+        <%= speaker.name %> 
+        <% if speaker.link: %>
+          <a href="<%= speaker.link.href %>" title="<%= speaker.link.text %>"><%= speaker.link.text %></a>
+        <% end %>
+
+      <%end%>
+      
+      </h3>
+      <p class="speakers-bio"><%= appointment.presentation.description %></p>
     </li>
   <% end %>
 <% end %>
 </ul>
+
+<script type='text/javascript'>
+//dá um desconto que aqui é mistura de coffescript (pra pegar os dados do docpad) e js puro 
+var changePhotoInterval = 5000
+function changePhoto(id, photos, index){
+  var el = document.getElementById(id);
+  changeFadeOut(photos[index%photos.length], el, 500, true);
+  setTimeout(function(){ changePhoto(id, photos, ++index); }, changePhotoInterval);
+}
+<%index = -1%>
+<% for appointment in @schedule: %>
+  <%index++%>
+  <% if appointment.speakers.length > 1:%>
+    var photos_<%=index%> = [];
+    <%for speaker in appointment.speakers:%>
+      photos_<%=index%>.push('<%=speaker.photo%>')
+    <%end%>  
+    setTimeout(function(){ changePhoto(<%=index%>, photos_<%=index%>, 1); }, changePhotoInterval);
+  <%end%>
+<%end%>
+      function changeFadeOut(newSrc, el, duration, IEsupport) {
+        var  IE = (IEsupport) ? IEsupport : false,
+        opacity = 1,
+        interval = 50,
+        gap = interval / duration;
+
+        function fadeOut() {
+          opacity = opacity - gap; 
+          el.style.opacity = opacity;
+          if(IE) {
+            el.style.filter = 'alpha(opacity=' + opacity * 100 + ')';
+            el.style.filter = 'progid:DXImageTransform.Microsoft.Alpha(Opacity=' + opacity * 100 + ')';
+          }
+          if(opacity <= 0) { window.clearInterval(fading);}
+          if(opacity <= 0) { el.style.display = "none"; el.setAttribute('src', newSrc); changeFadeIn(newSrc, el, duration, IEsupport)}
+        }
+        var fading = window.setInterval(fadeOut, interval);
+      }
+      function changeFadeIn(newSrc, el, duration, IEsupport) {
+            var  IE = (IEsupport) ? IEsupport : false,
+            opacity = 1,
+            interval = 50,
+            gap = interval / duration;
+
+            el.style.display = 'block';
+            el.style.opacity = opacity;
+            if(IE) {
+              el.style.filter = 'alpha(opacity=' + opacity + ')';
+              el.style.filter = 'progid:DXImageTransform.Microsoft.Alpha(Opacity=' + opacity + ')';
+            } 
+          function fadeIn() {
+            opacity = opacity + gap;
+            el.style.opacity = opacity;
+            if(IE) {
+              el.style.filter = 'alpha(opacity=' + opacity * 100 + ')';
+              el.style.filter = 'progid:DXImageTransform.Microsoft.Alpha(Opacity=' + opacity * 100 + ')';
+            }
+            if(opacity >= 1) { window.clearInterval(fading);}
+          }
+          var fading = window.setInterval(fadeIn, interval);
+        }
+</script>

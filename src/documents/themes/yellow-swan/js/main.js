@@ -9,10 +9,6 @@
         conf.menu.init();
     };
 
-    conf.photos = {
-
-    }
-
     /***
         Google Maps implementation
     ***/

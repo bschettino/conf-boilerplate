@@ -94,7 +94,9 @@ module.exports = {
       'about',
       'location',
       'speakers',
-      // 'schedule',
+      'files',
+      'evaluation',
+      'sponsors',
       'contact'
     ],
 
@@ -103,7 +105,9 @@ module.exports = {
       about: "Sobre",
       location: "Localização",
       speakers: "Palestras",
-      // schedule: "Programação",
+      files: "Arquivos",
+      evaluation: "Avaliação",
+      sponsors: "Patrocínio",
       contact: "Contato"
     },
 
@@ -145,9 +149,9 @@ module.exports = {
     // List of Sponsors
     sponsors: [
       {
-        name: "Eventick",
-        logo: "themes/yellow-swan/img/sponsor.png",
-        url: "http://eventick.com.br"
+        name: "STI-UFF",
+        logo: "themes/yellow-swan/img/sti2.png",
+        url: "http://www.sti.uff.br/"
       }
     ],
 

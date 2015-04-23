@@ -1,0 +1,2 @@
+<h2 class="section-title"><%= @labels['files'] %></h2>
+<p>Acesse os arquivos das apresentações no nosso <a href='https://www.dropbox.com/sh/9do0id8m90kmpms/AAANl1FpZS_B-TUwYWIEWPf8a?dl=0'>dropbox</a>.</p>

@@ -1,2 +1,2 @@
 <h2 class="section-title"><%= @labels['evaluation'] %></h2>
-<p>Responda nossa pesquisa e avalie o último evento no <a href='http://goo.gl/forms/obuIjyJQYd'>link</a>.</p>
+<p>Clique <a href='http://goo.gl/forms/obuIjyJQYd'>aqui</a> e avalie o último evento.</p>

@@ -60,6 +60,28 @@ ururay = {
           } 
         }
 
+luis = {
+          name: "Luis Vasconcellos",
+          photo: "themes/yellow-swan/img/luis.jpg",
+          bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+          company: "Apple, Inc.",
+          link: {
+            href: "https://github.com/vasconcelloslf",
+            text: "@vasconcelloslf"
+          } 
+        }  
+
+coffee = {
+          name: "",
+          photo: "themes/yellow-swan/img/coffeeBreak2.jpg",
+          bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo",
+          company: "Apple, Inc."
+          // link: {
+          //   href: "https://github.com/vasconcelloslf",
+          //   text: "@vasconcelloslf"
+          // } 
+        }               
+
 module.exports = {
 
   prompts: false,
@@ -135,12 +157,29 @@ module.exports = {
           time: "15h00"
         }
       },
+
       {
         speakers: [ururay],
         presentation: {
           title: "Já pensou em fazer seu blog estático?",
           description: "O que dizer desse generator que mal conheço e já considero pacas? Entenda como o Jekyll pode facilitar o desenvolvimento do seu blog usando truques que você já conhece. Sim, é magia!",
           time: "15h30"
+        }
+      },
+      {
+        speakers: [coffee],
+        presentation: {
+          title: "Coffee Break",
+          description: "",
+          time: "16h00"
+        }
+      },
+      {
+        speakers: [luis],
+        presentation: {
+          title: "Apps Híbridas com Cordova e Ionic",
+          description: "",
+          time: "16h30"
         }
       }
     ],

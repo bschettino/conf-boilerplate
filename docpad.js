@@ -117,8 +117,8 @@ module.exports = {
     // Site info
     site: {
       theme: "yellow-swan",
-      url: "http://bschettino.github.io/conf-boilerplate/"
-      // googleanalytics: "UA-33656081-1"
+      url: "http://bschettino.github.io/conf-boilerplate/",
+      googleanalytics: "UA-62307014-1"
     },
 
     // Active sections on the website

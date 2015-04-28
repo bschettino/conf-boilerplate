@@ -152,8 +152,8 @@ module.exports = {
       {
         speakers: [marcos],
         presentation: {
-          title: "JavaScript funcional: O que eu aprendi com Haskell",
-          description: "",
+          title: "Programação funcional: uma viagem de Haskell à JavaScript",
+          description: "Higher-order functions, pattern matching, laziness, listas infinitas, currying, monads. Dá pra usar no mundo real? Em JavaScript? Não conhece metade desses termos? Assista à essa palestra e descubra como incorporar técnicas de programação funcional em seu código JavaScript, com base em exemplos em Haskell!",
           time: "15h00"
         }
       },

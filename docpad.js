@@ -157,15 +157,6 @@ module.exports = {
           time: "15h00"
         }
       },
-
-      {
-        speakers: [ururay],
-        presentation: {
-          title: "Já pensou em fazer seu blog estático?",
-          description: "O que dizer desse generator que mal conheço e já considero pacas? Entenda como o Jekyll pode facilitar o desenvolvimento do seu blog usando truques que você já conhece. Sim, é magia!",
-          time: "15h30"
-        }
-      },
       {
         speakers: [coffee],
         presentation: {
@@ -174,14 +165,16 @@ module.exports = {
           time: "16h00"
         }
       },
+
       {
-        speakers: [luis],
+        speakers: [ururay],
         presentation: {
-          title: "Apps Híbridas com Cordova e Ionic",
-          description: "",
+          title: "Já pensou em fazer seu blog estático?",
+          description: "O que dizer desse generator que mal conheço e já considero pacas? Entenda como o Jekyll pode facilitar o desenvolvimento do seu blog usando truques que você já conhece. Sim, é magia!",
           time: "16h30"
         }
       }
+
     ],
 
     // List of Sponsors
